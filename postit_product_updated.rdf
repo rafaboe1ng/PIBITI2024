@@ -1,0 +1,1054 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://anonymous#"
+     xml:base="http://anonymous"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Post="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#"
+     xmlns:post="http://www.semanticweb.org/rafa/ontologies/postit-product#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrl2="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://anonymous"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/postit-product#executedBy -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/postit-product#executedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/postit-product#instruction -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/postit-product#instruction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/postit-product#requiredQuantity -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/postit-product#requiredQuantity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/postit-product#sequence -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/postit-product#sequence"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/postit-product#stockLevel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/postit-product#stockLevel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/postit-product#usesProgram -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/postit-product#usesProgram"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/postit-product#usesSupply -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/postit-product#usesSupply"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#composedOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#composedOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Supply"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#executedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#executedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#AssemblyStep"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#hasAssemblyStep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#hasAssemblyStep">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#AssemblyStep"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#hasInstruction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#hasInstruction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#AssemblyStep"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#instruction"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#usesProgram -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#usesProgram">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#AssemblyStep"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#RobotProgram"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#usesSupply -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#usesSupply">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#AssemblyStep"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Supply"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#instruction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#instruction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#AssemblyStep"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#requiredQuantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#requiredQuantity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#AssemblyStep"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#hasLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#sequence -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#sequence">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#AssemblyStep"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Agent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Agent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#AssemblyStep -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#AssemblyStep"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#BluePostit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#BluePostit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Postit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#BluePostitProduct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#BluePostitProduct">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#FanucRobot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#FanucRobot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#GreenPostit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#GreenPostit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Postit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#GreenPostitProduct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#GreenPostitProduct">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertBluePostit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertBluePostit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertPostit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#usesProgram"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertBluePostit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#usesSupply"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#BluePostit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertGreenPostit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertGreenPostit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertPostit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#usesProgram"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertGreenPostit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#usesSupply"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#GreenPostit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertPinkPostit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertPinkPostit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertPostit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#usesProgram"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertPinkPostit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#usesSupply"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PinkPostit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertPostit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertPostit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#AssemblyStep"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#executedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URRobot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertYellowPostit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertYellowPostit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertPostit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#usesProgram"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertYellowPostit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#usesSupply"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#YellowPostit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PinkPostit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PinkPostit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Postit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PinkPostitProduct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PinkPostitProduct">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Plate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Plate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Supply"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PositionPlate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PositionPlate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#AssemblyStep"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#executedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URRobot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#usesSupply"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Plate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Postit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Postit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Supply"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Product"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#RobotProgram -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#RobotProgram"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Screw -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Screw">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Supply"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#ScrewPlate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#ScrewPlate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#AssemblyStep"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#executedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#FanucRobot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#usesSupply"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Supply -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Supply"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URRobot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URRobot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Wood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Wood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Supply"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#YellowPostit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#YellowPostit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Postit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#YellowPostitProduct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#YellowPostitProduct">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#HumanOperator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#HumanOperator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#PickCart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#PickCart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#AssemblyStep"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#executedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#HumanOperator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#usesSupply"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Wood"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#ReturnCart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#ReturnCart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#AssemblyStep"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#executedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#HumanOperator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#BluePostitStock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#BluePostitStock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#BluePostit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#FanucProgram_ScrewPlate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#FanucProgram_ScrewPlate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#RobotProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#FanucRobot_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#FanucRobot_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#FanucRobot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#GreenPostitStock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#GreenPostitStock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#GreenPostit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertBluePostit_Step -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertBluePostit_Step">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertBluePostit"/>
+        <Post:executedBy rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URRobot_01"/>
+        <Post:usesProgram rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertBluePostit"/>
+        <Post:usesSupply rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#BluePostitStock"/>
+        <Post:requiredQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</Post:requiredQuantity>
+        <post:instruction>URRobot_01: execute URProgram_InsertBluePostit to pick 1 Blue Post-it from BluePostitStock and place it on the wooden base.</post:instruction>
+        <post:sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</post:sequence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertGreenPostit_Step -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertGreenPostit_Step">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertGreenPostit"/>
+        <Post:executedBy rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URRobot_01"/>
+        <Post:usesProgram rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertGreenPostit"/>
+        <Post:usesSupply rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#GreenPostitStock"/>
+        <Post:requiredQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</Post:requiredQuantity>
+        <post:instruction>URRobot_01: execute URProgram_InsertGreenPostit to pick 1 Green Post-it from GreenPostitStock and place it on the wooden base.</post:instruction>
+        <post:sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</post:sequence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertPinkPostit_Step -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertPinkPostit_Step">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertPinkPostit"/>
+        <Post:executedBy rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URRobot_01"/>
+        <Post:usesProgram rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertPinkPostit"/>
+        <Post:usesSupply rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PinkPostitStock"/>
+        <Post:requiredQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</Post:requiredQuantity>
+        <post:instruction>URRobot_01: execute URProgram_InsertPinkPostit to pick 1 Pink Post-it from PinkPostitStock and place it on the wooden base.</post:instruction>
+        <post:sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</post:sequence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertYellowPostit_Step -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertYellowPostit_Step">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertYellowPostit"/>
+        <Post:executedBy rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URRobot_01"/>
+        <Post:usesProgram rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertYellowPostit"/>
+        <Post:usesSupply rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#YellowPostitStock"/>
+        <Post:requiredQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</Post:requiredQuantity>
+        <post:instruction>URRobot_01: execute URProgram_InsertYellowPostit to pick 1 Yellow Post-it from YellowPostitStock and place it on the wooden base.</post:instruction>
+        <post:sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</post:sequence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PinkPostitStock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PinkPostitStock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PinkPostit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PlateStock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PlateStock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Plate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PositionPlate_Step -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PositionPlate_Step">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PositionPlate"/>
+        <Post:executedBy rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URRobot_01"/>
+        <Post:usesProgram rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_PositionPlate"/>
+        <Post:usesSupply rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PlateStock"/>
+        <Post:requiredQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</Post:requiredQuantity>
+        <post:instruction>URRobot_01: execute URProgram_PositionPlate to move 1 Plate from PlateStock into assembly position.</post:instruction>
+        <post:sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</post:sequence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Rafa_Order -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Rafa_Order"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Rafael_Order -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Rafael_Order">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PinkPostitProduct"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#ScrewPlate_Step -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#ScrewPlate_Step">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#ScrewPlate"/>
+        <Post:executedBy rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#FanucRobot_01"/>
+        <Post:usesProgram rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#FanucProgram_ScrewPlate"/>
+        <Post:usesSupply rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#ScrewStock"/>
+        <Post:requiredQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</Post:requiredQuantity>
+        <post:instruction>FanucRobot_01: execute FanucProgram_ScrewPlate to fasten the plate with 4 Screws from ScrewStock.</post:instruction>
+        <post:sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</post:sequence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#ScrewStock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#ScrewStock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Screw"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertBluePostit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertBluePostit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#RobotProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertGreenPostit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertGreenPostit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#RobotProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertPinkPostit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertPinkPostit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#RobotProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertYellowPostit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_InsertYellowPostit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#RobotProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_PositionPlate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URProgram_PositionPlate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#RobotProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URRobot_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URRobot_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#URRobot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#WoodStock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#WoodStock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Wood"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#YellowPostitStock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#YellowPostitStock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#YellowPostit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#HumanOperator_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#HumanOperator_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#HumanOperator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#PickCart_Step -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#PickCart_Step">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#PickCart"/>
+        <Post:executedBy rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#HumanOperator_01"/>
+        <Post:usesSupply rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#WoodStock"/>
+        <Post:requiredQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</Post:requiredQuantity>
+        <post:instruction>Pick up from the Storage the cart loaded with 1 Wood.</post:instruction>
+        <post:sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</post:sequence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#ReturnCart_Step -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#ReturnCart_Step">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#ReturnCart"/>
+        <Post:executedBy rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#HumanOperator_01"/>
+        <post:instruction>Return the cart to the Storage.</post:instruction>
+        <post:sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</post:sequence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#BluePostitProduct"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#GreenPostitProduct"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PinkPostitProduct"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#YellowPostitProduct"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/rafa/ontologies/postit-product.owl#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product/p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+        <rdfs:comment>Gets the step for each color</rdfs:comment>
+        <rdfs:label>InsertBluePostitStep</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#BluePostitProduct"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rafa/ontologies/postit-product.owl#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#hasAssemblyStep"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rafa/ontologies/postit-product.owl#p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertBluePostit_Step"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+        <rdfs:comment>Gets the step for each color</rdfs:comment>
+        <rdfs:label>InsertGreenPostitStep</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#GreenPostitProduct"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#hasAssemblyStep"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product/p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertGreenPostit_Step"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+        <rdfs:comment>Gets the step for each color</rdfs:comment>
+        <rdfs:label>InsertPinkPostitStep</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PinkPostitProduct"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#hasAssemblyStep"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product/p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertPinkPostit_Step"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+        <rdfs:comment>Positioning and Screwing the plate steps</rdfs:comment>
+        <rdfs:label>PlateSteps</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Product"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#hasAssemblyStep"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product/p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#ScrewPlate_Step"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#hasAssemblyStep"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product/p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#PositionPlate_Step"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+        <rdfs:comment>Products must be picked and returned to storage</rdfs:comment>
+        <rdfs:label>StockingSteps</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Product"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#hasAssemblyStep"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product/p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#PickCart_Step"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#hasAssemblyStep"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product/p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product#ReturnCart_Step"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+        <rdfs:comment>Gets the step for each color</rdfs:comment>
+        <rdfs:label>InsertYellowPostitStep</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#YellowPostitProduct"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#hasAssemblyStep"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/postit-product/p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#InsertYellowPostit_Step"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
