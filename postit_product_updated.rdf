@@ -656,12 +656,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Rafa_Order -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Rafa_Order"/>
-    
-
-
     <!-- http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Rafael_Order -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rafa/ontologies/2025/4/PostitProduct#Rafael_Order">
